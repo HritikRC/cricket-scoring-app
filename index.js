@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const cors = require("cors");
 const fs = require("fs");
+const csv = require('csv-parser');
 
 app.use(cors());
 app.use(express.json());
@@ -13,6 +14,16 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
+const replaceAsterisks = (obj) => {
+    for (const key in obj) {
+        if (typeof obj[key] === 'string') {
+            obj[key] = obj[key].replace(/\*/g, ',');
+        } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+            replaceAsterisks(obj[key]);
+        }
+    }
+};
+
 app.post("/data", (req, res) => {
     if (req.body) {
         const [dayOrSession, csvTable] = req.body;
@@ -20,14 +31,33 @@ app.post("/data", (req, res) => {
         res.status(200).send("OK");
 
         const dataDir = path.join(__dirname, "data");
-        if(dayOrSession == "day"){
-            // Determine the next available filename
+        const jsonDir = path.join(__dirname, "data_json");
+
+        const handleCSVtoJSON = (csvFilePath, jsonFilePath) => {
+            const results = [];
+            fs.createReadStream(csvFilePath)
+                .pipe(csv())
+                .on('data', (data) => results.push(data))
+                .on('end', () => {
+                    const output = { "Sheet1": results };
+                    replaceAsterisks(output); // Replace asterisks with commas
+                    fs.writeFile(jsonFilePath, JSON.stringify(output, null, 2), (err) => {
+                        if (err) {
+                            console.error("Error writing JSON file:", err);
+                        } else {
+                            console.log(`JSON file successfully updated: ${jsonFilePath}`);
+                        }
+                    });
+                });
+        };
+
+        if(dayOrSession === "day"){
             fs.readdir(dataDir, (err, files) => {
                 if (err) {
                     console.error("Error reading directory:", err);
                     return;
                 }
-                // Filter out the existing CSV files and find the maximum number
+
                 const csvFiles = files.filter(file => file.startsWith("data") && file.endsWith(".csv"));
                 let maxNumber = 0;
                 csvFiles.forEach(file => {
@@ -39,25 +69,29 @@ app.post("/data", (req, res) => {
                         }
                     }
                 });
-                // Determine the next number
+
                 const nextNumber = maxNumber + 1;
                 const newFileName = `data${nextNumber}.csv`;
-                // Write the new file
+
                 fs.writeFile(path.join(dataDir, newFileName), csvTable, err => {
                     if (err) {
                         console.error("File write error:", err);
                     } else {
                         console.log(`File write successful! New file created: ${newFileName}`);
                     }
+
+                    const csvFilePath = path.join(dataDir, newFileName);
+                    const jsonFilePath = path.join(jsonDir, `data${nextNumber}.json`);
+                    handleCSVtoJSON(csvFilePath, jsonFilePath);
                 });
             });
-        } else if(dayOrSession == "session"){
+        } else if(dayOrSession === "session"){
             fs.readdir(dataDir, (err, files) => {
                 if (err) {
                     console.error("Error reading directory:", err);
                     return;
                 }
-                // Filter out the existing CSV files and find the maximum number
+
                 const csvFiles = files.filter(file => file.startsWith("data") && file.endsWith(".csv"));
                 let maxNumber = 0;
                 csvFiles.forEach(file => {
@@ -69,15 +103,19 @@ app.post("/data", (req, res) => {
                         }
                     }
                 });
-                // Determine the latest file
+
                 const latestFileName = `data${maxNumber}.csv`;
-                // Append to the latest file
+
                 fs.appendFile(path.join(dataDir, latestFileName), '\n' + csvTable, err => {
                     if (err) {
                         console.error("File append error:", err);
                     } else {
                         console.log(`File append successful! Data appended to: ${latestFileName}`);
                     }
+
+                    const csvFilePath = path.join(dataDir, latestFileName);
+                    const jsonFilePath = path.join(jsonDir, `data${maxNumber}.json`);
+                    handleCSVtoJSON(csvFilePath, jsonFilePath);
                 });
             });
         }

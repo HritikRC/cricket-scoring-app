@@ -21,7 +21,7 @@ function Game() {
 
     function convertCodesToWickets(n: number){
         var codes = [-1, -2, -3, -4, -5, -6, -7, -8];
-        var wickets = ["Bowled", "Edged_Off", "Edged_Leg", "Box", "Caught", "Runout\",\"1", "Runout\",\"3", "LBW"];
+        var wickets = ["Bowled", "Edged_Off", "Edged_Leg", "Box", "Caught", "Runout*1", "Runout*3", "LBW"];
         return wickets[codes.indexOf(n)];
     }
 

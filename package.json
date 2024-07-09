@@ -1,0 +1,16 @@
+{
+  "name": "cricket-scoring-app",
+  "version": "1.0.0",
+  "description": "This app is used to count and record the score in the 3-player-format cricket game invented by RRH.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "Hritik Roy Chowdhury",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

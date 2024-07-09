@@ -21,7 +21,7 @@ function Game() {
 
     function convertCodesToWickets(n: number){
         var codes = [-1, -2, -3, -4, -5, -6, -7, -8];
-        var wickets = ["Bowled", "Edged_Off", "Edged_Leg", "Box", "Caught", "Runout,1", "Runout,3", "LBW"];
+        var wickets = ["Bowled", "Edged_Off", "Edged_Leg", "Box", "Caught", "Runout\",\"1", "Runout\",\"3", "LBW"];
         return wickets[codes.indexOf(n)];
     }
 
@@ -47,7 +47,7 @@ function Game() {
             }
         };
 
-        const data = [["Bowler Name", "Batter Name", "1", "2", "3", "4", "5", "6"]];
+        const data = globalStateCtx.dayOrSession == 1 ? [["Bowler Name", "Batter Name", "1", "2", "3", "4", "5", "6"]] : [];
         for(var i = 1; i < 4; i++){
             var inning = i == 1 ? t.inning1 : i == 2 ? t.inning2 : t.inning3;
             for(var row = 0; row < inning.timeline.length; row++){
@@ -81,15 +81,16 @@ function Game() {
     
             const sendData = async () => {
                 const url = "http://localhost:8000/data";
-    
+                var dayOrSession = globalStateCtx.dayOrSession == 1 ? "day" : "session";
+                
                 // Post request for sending the data
                 try {
                     const response = await fetch(url, {
                         method: "POST",
                         headers: {
-                            'Content-Type': 'text/plain'
+                            'Content-Type': 'application/json'
                         },
-                        body: csvTable
+                        body: JSON.stringify([dayOrSession, csvTable])
                     });
     
                     if(response.ok) {

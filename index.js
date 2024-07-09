@@ -5,7 +5,7 @@ const cors = require("cors");
 const fs = require("fs");
 
 app.use(cors());
-app.use(express.text()); 
+app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "client", "dist")));
 
@@ -14,17 +14,73 @@ app.get("/", (req, res) => {
 });
 
 app.post("/data", (req, res) => {
-    console.log("\nReceived data:", "\n" + req.body + "\n"); 
     if (req.body) {
-        res.status(200).send("OK"); 
+        const [dayOrSession, csvTable] = req.body;
+        console.log("\nReceived data:", "\nDay or Session:", dayOrSession, "\nCSV Table:", csvTable, "\n");
+        res.status(200).send("OK");
 
-        fs.writeFile(path.join(__dirname, "data", "data.csv"), req.body, err => {
-            if (err) {
-                console.error(err);
-            } else {
-                console.log("File write successfull!");
-            }
-        });
+        const dataDir = path.join(__dirname, "data");
+        if(dayOrSession == "day"){
+            // Determine the next available filename
+            fs.readdir(dataDir, (err, files) => {
+                if (err) {
+                    console.error("Error reading directory:", err);
+                    return;
+                }
+                // Filter out the existing CSV files and find the maximum number
+                const csvFiles = files.filter(file => file.startsWith("data") && file.endsWith(".csv"));
+                let maxNumber = 0;
+                csvFiles.forEach(file => {
+                    const match = file.match(/data(\d+)\.csv/);
+                    if (match) {
+                        const number = parseInt(match[1], 10);
+                        if (number > maxNumber) {
+                            maxNumber = number;
+                        }
+                    }
+                });
+                // Determine the next number
+                const nextNumber = maxNumber + 1;
+                const newFileName = `data${nextNumber}.csv`;
+                // Write the new file
+                fs.writeFile(path.join(dataDir, newFileName), csvTable, err => {
+                    if (err) {
+                        console.error("File write error:", err);
+                    } else {
+                        console.log(`File write successful! New file created: ${newFileName}`);
+                    }
+                });
+            });
+        } else if(dayOrSession == "session"){
+            fs.readdir(dataDir, (err, files) => {
+                if (err) {
+                    console.error("Error reading directory:", err);
+                    return;
+                }
+                // Filter out the existing CSV files and find the maximum number
+                const csvFiles = files.filter(file => file.startsWith("data") && file.endsWith(".csv"));
+                let maxNumber = 0;
+                csvFiles.forEach(file => {
+                    const match = file.match(/data(\d+)\.csv/);
+                    if (match) {
+                        const number = parseInt(match[1], 10);
+                        if (number > maxNumber) {
+                            maxNumber = number;
+                        }
+                    }
+                });
+                // Determine the latest file
+                const latestFileName = `data${maxNumber}.csv`;
+                // Append to the latest file
+                fs.appendFile(path.join(dataDir, latestFileName), '\n' + csvTable, err => {
+                    if (err) {
+                        console.error("File append error:", err);
+                    } else {
+                        console.log(`File append successful! Data appended to: ${latestFileName}`);
+                    }
+                });
+            });
+        }
     } else {
         res.status(400).send("No data received");
     }

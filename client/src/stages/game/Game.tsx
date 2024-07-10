@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import GlobalStateContext from "../../store/global-state-context";
 import Innings from "./Innings";
 import Inning1StateContext from "../../store/inning1-state-context";
@@ -10,6 +10,8 @@ function Game() {
     const inning1StateCtx = useContext(Inning1StateContext);
     const inning2StateCtx = useContext(Inning2StateContext);
     const inning3StateCtx = useContext(Inning3StateContext);
+
+    const [disableSaveData, setDisableSaveData] = useState(true);
 
     function splitArrayIntoChunks(array: number[], L: number) {
         let result = [];
@@ -109,6 +111,8 @@ function Game() {
     
 
     function saveData() {
+        setDisableSaveData(false);
+
         var timeline1 = inning1StateCtx.timeline;
         var timeline2 = inning2StateCtx.timeline;
         var timeline3 = inning3StateCtx.timeline;
@@ -155,7 +159,7 @@ function Game() {
                     </div>
                 </div>
             </div>
-            <button disabled={globalStateCtx.inningsNumber != 4} type="button" className="btn btn-secondary btn-lg" style={{ position: "fixed", left: "50%", transform: "translate(-50%, 50%)" }} onClick={saveData}>
+            <button disabled={!(globalStateCtx.inningsNumber == 4 && disableSaveData)} type="button" className="btn btn-secondary btn-lg" style={{ position: "fixed", left: "50%", transform: "translate(-50%, 50%)" }} onClick={saveData}>
                 <h2>Save Data</h2>
             </button>
         </>

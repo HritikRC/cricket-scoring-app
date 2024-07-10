@@ -6,7 +6,7 @@
 
 .buttonGroupPositioning {
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -14,4 +14,11 @@
 .buttonStyles {
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.statsButtonPositioning {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

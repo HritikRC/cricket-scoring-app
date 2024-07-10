@@ -1,0 +1,184 @@
+{
+  "Sheet1": [
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": "Edged_Off",
+      "6": "Null",
+      "Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": "Bowled",
+      "5": "Null",
+      "6": "Null",
+      "Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 2,
+      "4": 0,
+      "5": "Runout,1",
+      "6": "Null",
+      "Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 2,
+      "5": 4,
+      "6": 0,
+      "Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 2,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": "Edged_Off",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 4,
+      "Bowler Name": "Rahul",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 2,
+      "Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": "LBW",
+      "2": "Null",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "Bowler Name": "Rahul",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 2,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 4,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": "Runout,1",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": "Bowled",
+      "5": "Null",
+      "6": "Null",
+      "Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": "Box",
+      "5": "Null",
+      "6": "Null",
+      "Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 4,
+      "4": "Runout,1",
+      "5": "Null",
+      "6": "Null",
+      "Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    }
+  ]
+}

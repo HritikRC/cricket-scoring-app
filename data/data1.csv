@@ -1,0 +1,19 @@
+Bowler Name,Batter Name,1,2,3,4,5,6
+Hritik,Rohit,0,2,0,0,Edged_Off,Null
+Hritik,Rahul,0,0,0,Bowled,Null,Null
+Rohit,Hritik,0,0,2,0,Runout*1,Null
+Rahul,Hritik,0,2,0,0,0,0
+Rohit,Hritik,0,2,0,2,4,0
+Rahul,Hritik,0,0,0,0,0,0
+Rohit,Hritik,2,0,0,0,0,0
+Rahul,Hritik,0,Edged_Off,Null,Null,Null,Null
+Rahul,Rohit,0,2,0,0,0,4
+Hritik,Rohit,0,0,0,0,0,2
+Rahul,Rohit,LBW,Null,Null,Null,Null,Null
+Hritik,Rahul,0,0,2,0,0,0
+Rohit,Rahul,0,2,0,0,0,0
+Hritik,Rahul,0,4,0,0,0,0
+Rohit,Rahul,0,0,Runout*1,Null,Null,Null
+Hritik,Rahul,0,2,0,Bowled,Null,Null
+Hritik,Rohit,0,0,0,Box,Null,Null
+Rahul,Hritik,0,2,4,Runout*1,Null,Null

@@ -4,25 +4,58 @@ const path = require("path");
 const cors = require("cors");
 const fs = require("fs");
 const csv = require('csv-parser');
+const { exec } = require('child_process');
 
 app.use(cors());
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "client", "dist")));
+app.use('/pictures', express.static(path.join(__dirname, 'statistics/pictures')));
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
-const replaceAsterisks = (obj) => {
+const processValues = (obj) => {
     for (const key in obj) {
         if (typeof obj[key] === 'string') {
+            // Replace asterisks with commas
             obj[key] = obj[key].replace(/\*/g, ',');
+
+            // Convert to integer if the string is a number
+            if (!isNaN(obj[key]) && obj[key].trim() !== "") {
+                obj[key] = parseInt(obj[key], 10);
+            }
         } else if (typeof obj[key] === 'object' && obj[key] !== null) {
-            replaceAsterisks(obj[key]);
+            processValues(obj[key]);
         }
     }
 };
+
+app.post("/stats", (req, res) => {
+    if(req.body[0] == "STATISTICS_REQUEST"){
+        exec('python3 statistics/player_stats.py', (error, stdout, stderr) => {
+            if (error) {
+              console.error(`exec error: ${error}`);
+              return;
+            } else {
+                console.log("Created pictures...");
+
+                // Fetch a list of image files in the directory
+                fs.readdir(path.join(__dirname, 'statistics/pictures'), (err, files) => {
+                    if (err) {
+                        console.error(`Error reading directory: ${err}`);
+                        res.status(500).send('Internal Server Error');
+                        return;
+                    }
+                    const images = files.filter(file => file.endsWith('.jpg') || file.endsWith('.png'));
+                    const imageUrls = images.map(image => `/pictures/${image}`);
+                    res.json({ images: imageUrls });
+                });
+            }
+        });
+    }
+});
 
 app.post("/data", (req, res) => {
     if (req.body) {
@@ -40,7 +73,7 @@ app.post("/data", (req, res) => {
                 .on('data', (data) => results.push(data))
                 .on('end', () => {
                     const output = { "Sheet1": results };
-                    replaceAsterisks(output); // Replace asterisks with commas
+                    processValues(output); // Replace asterisks with commas and convert to integers
                     fs.writeFile(jsonFilePath, JSON.stringify(output, null, 2), (err) => {
                         if (err) {
                             console.error("Error writing JSON file:", err);

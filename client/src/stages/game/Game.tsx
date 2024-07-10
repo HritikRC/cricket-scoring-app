@@ -82,7 +82,7 @@ function Game() {
             console.log(csvTable);
     
             const sendData = async () => {
-                const url = "http://localhost:8000/data";
+                const url = globalStateCtx.url + "data";
                 var dayOrSession = globalStateCtx.dayOrSession == 1 ? "day" : "session";
                 
                 // Post request for sending the data

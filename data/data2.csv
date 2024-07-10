@@ -2,3 +2,6 @@ Bowler Name,Batter Name,1,2,3,4,5,6
 Hritik,Rahul,Bowled,Null,Null,Null,Null,Null
 Hritik,Rohit,Runout*3,Null,Null,Null,Null,Null
 Rahul,Hritik,0,2,Edged_Off,Null,Null,Null
+Hritik,Rahul,0,2,Edged_Off,Null,Null,Null
+Hritik,Rohit,0,2,LBW,Null,Null,Null
+Rahul,Hritik,0,Runout*1,Null,Null,Null,Null

@@ -16,7 +16,7 @@ function Intro() {
     useEffect(() => {
         if (seeingStats) {
             const sendData = async () => {
-                const url = "http://localhost:8000/stats";
+                const url = globalStateCtx.url + "stats";
                 
                 try {
                     const response = await fetch(url, {

@@ -1,7 +1,7 @@
 # Use an appropriate base image (node)
 FROM node:14
 
-# Set the working directory
+# Set the working directory (working dir, app)
 WORKDIR /app
 
 # Copy package.json and package-lock.json and install node dependencies

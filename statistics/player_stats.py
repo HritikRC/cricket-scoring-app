@@ -48,8 +48,9 @@ for root, dirs, files in os.walk(data_json_dir):
         if file.lower().endswith('.json'):
             JSON_files.append(os.path.join(root, file))
 
-print(current_dir)
-print(data_json_dir)
+print("\nCurrent dir: " + current_dir)
+print("Data_json_dir: " + data_json_dir)
+print("JSON_files: ")
 print(JSON_files)
 
 # DOES NOT ACCOUNT FOR 10 over limit! 
@@ -219,7 +220,7 @@ subjects = ['Hritik', 'Rohit', 'Rahul']
 
 # Ensure the "pictures" folder exists
 folder = os.path.join(current_dir, 'pictures')
-print(folder)
+print("Pictures Folder: " + folder + "\n")
 
 for name in subjects:
     # Create a deep copy of the subject
@@ -242,6 +243,7 @@ for name in subjects:
 
     # Save the plot to a file
     filename = os.path.join(folder, f'average_runs_plot_{name}.png')
+    print(filename)
     plt.savefig(filename)
 
     # Close the figure to avoid memory issues

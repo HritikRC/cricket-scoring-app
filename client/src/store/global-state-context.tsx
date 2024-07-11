@@ -72,6 +72,8 @@ export function GlobalStateContextProvider({children} : Props){
         bowler2: currentBowler2,
         inningsNumber: currentInningsNumber,
         timelines: currentTimelines,
+        // http://localhost:8000/
+        // https://cricket-scoring-app-hritikchowdhury-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/
         url: "https://cricket-scoring-app-hritikchowdhury-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/",
         setStage: setNewCurrentStage,
         setDayOrSession: setNewCurrentDayOrSession,

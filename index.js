@@ -39,6 +39,7 @@ app.post("/stats", (req, res) => {
               console.error(`exec error: ${error}`);
               return;
             } else {
+                console.log(stdout);
                 console.log("Created pictures...");
 
                 // Fetch a list of image files in the directory

@@ -54,7 +54,6 @@ function Intro() {
 
     return (
         <>
-            <h1>Cricket Scoring App - RRH</h1>
             <div className = {classes.buttonGroupPositioning}>
                 <button type="button" className={["btn btn-primary", classes.buttonStyles].join(" ")} onClick={
                     function(){

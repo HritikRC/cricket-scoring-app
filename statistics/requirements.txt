@@ -1,4 +1,4 @@
-blinker==1.8.2
+blinker==1.6.3
 click==8.1.7
 contourpy==1.2.0
 CoolProp==6.5.0.post1

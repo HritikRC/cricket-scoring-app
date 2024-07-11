@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -y python3 python3-pip
 COPY statistics/requirements.txt /app/statistics/
 RUN pip3 install -r /app/statistics/requirements.txt
 
+# Ensure the directory has the right permissions
+RUN mkdir -p statistics/pictures && chmod -R 777 statistics/pictures
+
 # Expose the port the app runs on
 EXPOSE 8000
 

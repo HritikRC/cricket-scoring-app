@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "client", "dist")));
-app.use('/pictures', express.static(path.join(__dirname, 'statistics/pictures')));
+app.use('/pictures', express.static(path.join(__dirname, '/pictures')));
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
@@ -34,7 +34,7 @@ const processValues = (obj) => {
 
 app.post("/stats", (req, res) => {
     if(req.body[0] == "STATISTICS_REQUEST"){
-        exec('python3 statistics/player_stats.py', (error, stdout, stderr) => {
+        exec('python3 player_stats.py', (error, stdout, stderr) => {
             if (error) {
               console.error(`exec error: ${error}`);
               return;
@@ -43,7 +43,7 @@ app.post("/stats", (req, res) => {
                 console.log("Created pictures...");
 
                 // Fetch a list of image files in the directory
-                fs.readdir(path.join(__dirname, 'statistics/pictures'), (err, files) => {
+                fs.readdir(path.join(__dirname, '/pictures'), (err, files) => {
                     if (err) {
                         console.error(`Error reading directory: ${err}`);
                         res.status(500).send('Internal Server Error');

@@ -15,11 +15,12 @@ COPY . /app/
 RUN apt-get update && apt-get install -y python3 python3-pip
 
 # Install Python dependencies
-COPY statistics/requirements.txt /app/statistics/
-RUN pip3 install -r /app/statistics/requirements.txt
+COPY /requirements.txt /app/
+RUN pip3 install -r /app/requirements.txt
 
-# Ensure the directory has the right permissions
-RUN mkdir -p /app/statistics/pictures && chmod -R 777 /app/statistics/pictures
+# Create files directory
+RUN mkdir -p /app/pictures
+RUN chmod -R 777 /app/pictures
 
 # Expose the port the app runs on
 EXPOSE 8000

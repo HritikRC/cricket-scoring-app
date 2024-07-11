@@ -38,8 +38,7 @@ def run_avg(list1):
 
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-data_json_dir = os.path.join(current_dir, '..', 'data_json')
-
+data_json_dir = os.path.join(current_dir, 'data_json')
 
 JSON_files = []
 

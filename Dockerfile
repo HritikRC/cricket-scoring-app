@@ -19,7 +19,7 @@ COPY statistics/requirements.txt /app/statistics/
 RUN pip3 install -r /app/statistics/requirements.txt
 
 # Ensure the directory has the right permissions
-RUN mkdir -p statistics/pictures && chmod -R 777 statistics/pictures
+RUN mkdir -p /app/statistics/pictures && chmod -R 777 /app/statistics/pictures
 
 # Expose the port the app runs on
 EXPOSE 8000

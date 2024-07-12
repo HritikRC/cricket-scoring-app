@@ -1,0 +1,404 @@
+{
+  "Sheet1": [
+    {
+      "1": 0,
+      "2": "Box",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 4,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 2,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": "Edged_Leg",
+      "2": "Null",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": "Runout,1",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 2,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": "Caught",
+      "2": "Null",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 2,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 2,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": "Edged_Off",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": "Edged_Off",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 2,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 4,
+      "2": 0,
+      "3": 4,
+      "4": 0,
+      "5": 2,
+      "6": 2,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": "Box",
+      "2": "Null",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 2,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": "Bowled",
+      "2": "Null",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 2,
+      "2": 0,
+      "3": 2,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": "Runout,1",
+      "3": "Null",
+      "4": "",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": "Caught",
+      "2": "Null",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": "Box",
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": "LBW",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": "Box",
+      "2": "Null",
+      "3": "Null",
+      "4": "Null",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Rohit"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 2,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 2,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": "Edged_Off",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rahul",
+      "Batter Name": "Hritik"
+    },
+    {
+      "1": 0,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "﻿Bowler Name": "Hritik",
+      "Batter Name": "Rahul"
+    },
+    {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": "Edged_Off",
+      "5": "Null",
+      "6": "Null",
+      "﻿Bowler Name": "Rohit",
+      "Batter Name": "Rahul"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-# Use an appropriate base image (node). Originally, this was node:14
-FROM node:22-bookworm
+# Use an appropriate base image (node).
+FROM node:14
 
 # Set the working directory (working dir, app)
 WORKDIR /app
